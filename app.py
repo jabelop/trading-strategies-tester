@@ -34,7 +34,6 @@ if no initial_cash is provided 10000$ will be used.
     parser.print_help()
     args = parser.parse_args()
 
-    print(args.asset)
     class_path = f"libraries.strategy.{args.module_name}.{args.strategy_class_name}"
     cls = locate(class_path)
     current_cash = args.initial_cash if args.initial_cash != None else init_cash
